@@ -171,7 +171,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fed71413313442e4e880cfe710b8f7c1, type: 2}
+  - {fileID: 2100000, guid: eae26a0d022f4e5296eef9934a9ea27b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -264,7 +264,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fed71413313442e4e880cfe710b8f7c1, type: 2}
+  - {fileID: 2100000, guid: eae26a0d022f4e5296eef9934a9ea27b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -456,7 +456,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fed71413313442e4e880cfe710b8f7c1, type: 2}
+  - {fileID: 2100000, guid: eae26a0d022f4e5296eef9934a9ea27b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -724,7 +724,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fed71413313442e4e880cfe710b8f7c1, type: 2}
+  - {fileID: 2100000, guid: eae26a0d022f4e5296eef9934a9ea27b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -817,7 +817,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fed71413313442e4e880cfe710b8f7c1, type: 2}
+  - {fileID: 2100000, guid: eae26a0d022f4e5296eef9934a9ea27b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -984,7 +984,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1257805910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0f9108eccec6194ca2d0b3b3d7923e7, type: 3}
+  m_Script: {fileID: 11500000, guid: 423ee17745ba4a9fa32b96fa6d3d18e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1838387627}
@@ -1094,8 +1094,10 @@ GameObject:
   - component: {fileID: 1838387630}
   - component: {fileID: 1838387629}
   - component: {fileID: 1838387628}
-  - component: {fileID: 1838387627}
   - component: {fileID: 1838387632}
+  - component: {fileID: 1838387627}
+  - component: {fileID: 1838387633}
+  - component: {fileID: 1838387634}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1112,19 +1114,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83da4d6ce0af247468bd9dedd2e006f9, type: 3}
+  m_Script: {fileID: 11500000, guid: c2745a3a75d54ce4af8b894750d8572e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   movementSpeed: 10
   footStepRate: 3
-  footStepSounds:
-  - {fileID: 8300000, guid: 1daae977c3bfe3f4eb05ba636c62877b, type: 3}
-  - {fileID: 8300000, guid: 4a8b659cb3b8aa74da3de7ec8ccb82d9, type: 3}
-  - {fileID: 8300000, guid: afef5e708a24baf49b0a2dca5d8949a4, type: 3}
-  - {fileID: 8300000, guid: 7846eab55e1222847a85ac129f3b730e, type: 3}
-  footStepParticleEffect: {fileID: 5128791543972785074, guid: 2634865f4d0517b44ac2d8384f3bbdc4,
-    type: 3}
-  playerHealthUiText: {fileID: 1257805912}
 --- !u!136 &1838387628
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1157,7 +1152,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fed71413313442e4e880cfe710b8f7c1, type: 2}
+  - {fileID: 2100000, guid: eae26a0d022f4e5296eef9934a9ea27b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1297,6 +1292,41 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1838387633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838387626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8705046d1d9419d95d5cb00f9b05215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footStepSounds:
+  - {fileID: 8300000, guid: 2b3ee73cadbf39046b11c06fd0dc19d2, type: 3}
+  - {fileID: 8300000, guid: 1cf0a89be76b0bd4db48180b92e0013d, type: 3}
+  - {fileID: 8300000, guid: 1f85fd4b84e07654da5c0dae14efec1b, type: 3}
+  - {fileID: 8300000, guid: d48fb49a08a3e9f4ea17e5ee85af70b8, type: 3}
+  - {fileID: 8300000, guid: 255e180b20cb7574b9b0fb7625ed7446, type: 3}
+  - {fileID: 8300000, guid: 22820ee8b455c0947a24d032f77b707b, type: 3}
+  - {fileID: 8300000, guid: 2ee344734a7a59c4283a173e54850b51, type: 3}
+  - {fileID: 8300000, guid: 91848f9aba1ad3547bf9540e5cd9dc86, type: 3}
+--- !u!114 &1838387634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1838387626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 756dda9781544b0fa9bd5d080dcc70e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  footStepParticleEffect: {fileID: 5128791543972785074, guid: 3056cea49f674e38b01c173b44fc812e,
+    type: 3}
 --- !u!1 &1887101146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,7 +1443,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fed71413313442e4e880cfe710b8f7c1, type: 2}
+  - {fileID: 2100000, guid: eae26a0d022f4e5296eef9934a9ea27b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

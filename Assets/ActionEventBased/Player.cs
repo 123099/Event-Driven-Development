@@ -1,16 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-namespace CleanedUp
+namespace ActionEventBased
 {
-	[RequireComponent(typeof(AudioSource))]
 	public class Player : MonoBehaviour
 	{
-		private AudioSource audioSource;
-
-		[SerializeField] private ParticleSystem footStepParticleEffect;
+		private int currentHealth;
 		[SerializeField] private float footStepRate = 3.0f;
-
-		[SerializeField] private AudioClip[] footStepSounds;
 
 		private bool isMoving;
 
@@ -20,14 +16,28 @@ namespace CleanedUp
 		private float timeBetweenFootSteps;
 		private float timeSinceLastFootStep;
 
-		public int CurrentHealth { get; private set; }
+		private int CurrentHealth
+		{
+			get => currentHealth;
+			set
+			{
+				currentHealth = value;
+				HealthChanged?.Invoke(currentHealth);
+			}
+		}
+
+		public event Action<int> HealthChanged;
+		public event Action FootStepPerformed;
 
 		private void Awake()
 		{
 			timeBetweenFootSteps = 1.0f / footStepRate;
+		}
 
-			audioSource = GetComponent<AudioSource>();
-			CurrentHealth = maxHealth;
+		private void Start()
+		{
+			CurrentHealth =
+				maxHealth; // This invokes the event on startup as well, automatically updating the UI. We did not have to do anything special. Be careful with the order -> if this is called first (Awake?), and only then the UI subscribed to the event. So, there are no listeners at this point.
 		}
 
 		// How much of this code actually relates to player logic, and how much to extra effects?
@@ -62,9 +72,7 @@ namespace CleanedUp
 			if (timeSinceLastFootStep >= timeBetweenFootSteps)
 			{
 				timeSinceLastFootStep -= timeBetweenFootSteps;
-
-				audioSource.PlayOneShot(footStepSounds[Random.Range(0, footStepSounds.Length)]);
-				Instantiate(footStepParticleEffect, transform.position, transform.rotation);
+				FootStepPerformed?.Invoke();
 			}
 
 			timeSinceLastFootStep += Time.deltaTime;

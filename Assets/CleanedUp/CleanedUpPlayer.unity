@@ -984,7 +984,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1257805910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0f9108eccec6194ca2d0b3b3d7923e7, type: 3}
+  m_Script: {fileID: 11500000, guid: daead05f71dc458daa5dc59eb19145d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1838387627}
@@ -1094,8 +1094,8 @@ GameObject:
   - component: {fileID: 1838387630}
   - component: {fileID: 1838387629}
   - component: {fileID: 1838387628}
-  - component: {fileID: 1838387627}
   - component: {fileID: 1838387632}
+  - component: {fileID: 1838387627}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83da4d6ce0af247468bd9dedd2e006f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 47d2b7d354554240947f5b8a0756ae49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   footStepParticleEffect: {fileID: 5128791543972785074, guid: 3056cea49f674e38b01c173b44fc812e,
@@ -1128,7 +1128,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2ee344734a7a59c4283a173e54850b51, type: 3}
   - {fileID: 8300000, guid: 91848f9aba1ad3547bf9540e5cd9dc86, type: 3}
   movementSpeed: 10
-  playerHealthUiText: {fileID: 1257805912}
 --- !u!136 &1838387628
 CapsuleCollider:
   m_ObjectHideFlags: 0
