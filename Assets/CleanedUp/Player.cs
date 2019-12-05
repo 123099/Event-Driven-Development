@@ -1,26 +1,25 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Normal
+namespace CleanedUp
 {
     [RequireComponent(typeof(AudioSource))]
     public class Player : MonoBehaviour
     {
-        [SerializeField] private float movementSpeed = 10.0f;
+        private AudioSource audioSource;
+
+        [SerializeField] private ParticleSystem footStepParticleEffect;
         [SerializeField] private float footStepRate = 3.0f;
 
-        [SerializeField] private AudioClip[] footStepSounds = null;
+        [SerializeField] private AudioClip[] footStepSounds;
+        [SerializeField] private float movementSpeed = 10.0f;
 
-        [SerializeField] private ParticleSystem footStepParticleEffect = null;
+        [SerializeField] private Text playerHealthUiText;
 
-        [SerializeField] private Text playerHealthUiText = null;
+        private float timeBetweenFootSteps;
+        private float timeSinceLastFootStep;
 
-        private float timeBetweenFootSteps = 0.0f;
-        private float timeSinceLastFootStep = 0.0f;
-
-        private AudioSource audioSource = null;
-
-        public float Health { get; private set; } = 100.0f;
+        private float Health { get; set; } = 100.0f;
 
         private void Awake()
         {
@@ -47,7 +46,7 @@ namespace Normal
             {
                 timeSinceLastFootStep -= timeBetweenFootSteps;
 
-                audioSource.PlayOneShot(footStepSounds[UnityEngine.Random.Range(0, footStepSounds.Length)]);
+                audioSource.PlayOneShot(footStepSounds[Random.Range(0, footStepSounds.Length)]);
                 Instantiate(footStepParticleEffect, transform.position, transform.rotation);
             }
 
