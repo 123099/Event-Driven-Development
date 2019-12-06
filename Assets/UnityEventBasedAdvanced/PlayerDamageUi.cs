@@ -3,43 +3,18 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace ActionEventBasedAdvanced
+namespace UnityEventBasedAdvanced
 {
 	public class PlayerDamageUi : MonoBehaviour
 	{
 		[SerializeField] private Text damageUiTextPrefab;
 		[SerializeField] private Player player;
 
-		private void OnEnable()
-		{
-			if (!player)
-			{
-				return;
-			}
-			var playerAttack = player.GetComponent<Attack>();
-
-			if (playerAttack)
-			{
-				playerAttack.DealtDamage += OnPlayerDealtDamage;
-			}
-		}
-
-		private void OnDisable()
-		{
-			if (!player)
-			{
-				return;
-			}
-			var playerAttack = player.GetComponent<Attack>();
-
-			if (playerAttack)
-			{
-				playerAttack.DealtDamage -= OnPlayerDealtDamage;
-			}
-		}
-
-		// No longer have to poll the player's state or manage player state variables to tell us when damage was dealt and how much.
-		private void OnPlayerDealtDamage(int damage)
+		// This can now be called directly from the editor.
+		// UnityEvent calls are serialized and saved with the scene. This results in slower performance, and forces us to keep the functions public, but it is more convenient.
+		// Use UnityEvents for things that do not happen very often -> we are having a trade-off between convenience and performance.
+		// One other downside is that renaming the functions will break all the references we set up in the editor. This is fixed by using the Rider IDE (does not work for dynamic functions), but anything else has trouble renaming functions that are used by UnityEvents.
+		public void DisplayDamage(int damage)
 		{
 			StartCoroutine(DisplayDamageCoroutine(damage));
 		}

@@ -985,10 +985,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1257805910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86bcf680848044d38219e95bba9834a1, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e1dce3b1be045e88a6f9b05ab4f3709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1838387635}
 --- !u!1 &1488821665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,12 +1033,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488821665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77933571e5a94187a6b8655261845422, type: 3}
+  m_Script: {fileID: 11500000, guid: c016bed88d0a4609943e1800fc16f942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageUiTextPrefab: {fileID: 6180326812842476760, guid: e263afda0437c6f44b3da4225ca3c4dd,
     type: 3}
-  player: {fileID: 1838387635}
+  player: {fileID: 1838387634}
 --- !u!1 &1664608448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,13 +1146,13 @@ GameObject:
   - component: {fileID: 1838387629}
   - component: {fileID: 1838387628}
   - component: {fileID: 1838387632}
-  - component: {fileID: 1838387635}
   - component: {fileID: 1838387638}
+  - component: {fileID: 1838387637}
+  - component: {fileID: 1838387636}
+  - component: {fileID: 1838387635}
   - component: {fileID: 1838387634}
   - component: {fileID: 1838387633}
-  - component: {fileID: 1838387637}
   - component: {fileID: 1838387627}
-  - component: {fileID: 1838387636}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1170,7 +1169,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e724755d1fc04dab8894c21ef5a17536, type: 3}
+  m_Script: {fileID: 11500000, guid: cedf4ce7f970453bb225309ffc90ecc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   footStepSounds:
@@ -1363,7 +1362,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb226b0036f043d58ea411e91b64cd1a, type: 3}
+  m_Script: {fileID: 11500000, guid: d90a314a77fb4e1895a883060541bd1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   footStepParticleEffect: {fileID: 5128791543972785074, guid: 3056cea49f674e38b01c173b44fc812e,
@@ -1377,10 +1376,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4902a0a909bc458d814f1d2af01c749d, type: 3}
+  m_Script: {fileID: 11500000, guid: 161c4f3326924a70b417757f2555fce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximum: 100
 --- !u!114 &1838387635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,9 +1388,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed96247d4004fe8be6304c4f26aaced, type: 3}
+  m_Script: {fileID: 11500000, guid: f07740b42ad646fa84f5bb57d0dc3341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartedMoving:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1838387637}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  StoppedMoving:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1838387637}
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  movementSpeed: 10
 --- !u!114 &1838387636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,10 +1429,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c1b5f0e1494c2e8aaf97d1d2f8d8c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ba12fa134534920b6b9dcf9838c2802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 3
+  Changed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1257805914}
+        m_MethodName: SetHealth
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  maximum: 100
 --- !u!114 &1838387637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,10 +1456,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0844f3c27bd472eb43190777ff9302e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6e1b240e5e294a23b6797035ae4567d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  Performed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1838387627}
+        m_MethodName: PlayRandomFootStepSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1838387633}
+        m_MethodName: SpawnFootStepParticleEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  rate: 3
 --- !u!114 &1838387638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1428,9 +1494,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05292e0359124433ac60a38390e40deb, type: 3}
+  m_Script: {fileID: 11500000, guid: f40774644b844b6b81b522876d1397a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DealtDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1488821667}
+        m_MethodName: DisplayDamage
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   damage: 5
 --- !u!1 &1887101146
 GameObject:

@@ -12,11 +12,19 @@ namespace ActionEventBased
 
 		private void OnEnable()
 		{
+			if (!player)
+			{
+				return;
+			}
 			player.DamageDealt += OnPlayerDamageDealt;
 		}
 
 		private void OnDisable()
 		{
+			if (!player)
+			{
+				return;
+			}
 			player.DamageDealt -= OnPlayerDamageDealt;
 		}
 

@@ -25,6 +25,17 @@
           <e p="PlayerHealthUi.cs" t="Include" />
           <e p="PlayerSounds.cs" t="Include" />
         </e>
+        <e p="ActionEventBasedAdvancedWithSendMessage" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="FootSteps.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUi.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+        </e>
         <e p="CleanedUp" t="Include">
           <e p="Player.cs" t="Include" />
           <e p="PlayerDamageUi.cs" t="Include" />
@@ -32,6 +43,20 @@
         </e>
         <e p="Normal" t="Include">
           <e p="Player.cs" t="Include" />
+        </e>
+        <e p="UnityEventBasedAdvanced" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="FootSteps.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUi.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="CustomUnityEvents.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Event Driven Development.sln" t="IncludeFlat" />

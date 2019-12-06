@@ -985,10 +985,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1257805910}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86bcf680848044d38219e95bba9834a1, type: 3}
+  m_Script: {fileID: 11500000, guid: e4609fd19bb84205a29f1be5d582b654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1838387635}
+  player: {fileID: 1838387627}
 --- !u!1 &1488821665
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,12 +1034,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1488821665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77933571e5a94187a6b8655261845422, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f855ae048d541e285d2051626d0a463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damageUiTextPrefab: {fileID: 6180326812842476760, guid: e263afda0437c6f44b3da4225ca3c4dd,
     type: 3}
-  player: {fileID: 1838387635}
+  player: {fileID: 1838387627}
 --- !u!1 &1664608448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,13 +1147,13 @@ GameObject:
   - component: {fileID: 1838387629}
   - component: {fileID: 1838387628}
   - component: {fileID: 1838387632}
-  - component: {fileID: 1838387635}
+  - component: {fileID: 1838387627}
   - component: {fileID: 1838387638}
+  - component: {fileID: 1838387637}
+  - component: {fileID: 1838387636}
+  - component: {fileID: 1838387635}
   - component: {fileID: 1838387634}
   - component: {fileID: 1838387633}
-  - component: {fileID: 1838387637}
-  - component: {fileID: 1838387627}
-  - component: {fileID: 1838387636}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1170,18 +1170,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e724755d1fc04dab8894c21ef5a17536, type: 3}
+  m_Script: {fileID: 11500000, guid: b54d5fb8ff024f1caf8b2a6fe68345fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footStepSounds:
-  - {fileID: 8300000, guid: 2b3ee73cadbf39046b11c06fd0dc19d2, type: 3}
-  - {fileID: 8300000, guid: 1cf0a89be76b0bd4db48180b92e0013d, type: 3}
-  - {fileID: 8300000, guid: 1f85fd4b84e07654da5c0dae14efec1b, type: 3}
-  - {fileID: 8300000, guid: d48fb49a08a3e9f4ea17e5ee85af70b8, type: 3}
-  - {fileID: 8300000, guid: 255e180b20cb7574b9b0fb7625ed7446, type: 3}
-  - {fileID: 8300000, guid: 22820ee8b455c0947a24d032f77b707b, type: 3}
-  - {fileID: 8300000, guid: 2ee344734a7a59c4283a173e54850b51, type: 3}
-  - {fileID: 8300000, guid: 91848f9aba1ad3547bf9540e5cd9dc86, type: 3}
 --- !u!136 &1838387628
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1363,11 +1354,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb226b0036f043d58ea411e91b64cd1a, type: 3}
+  m_Script: {fileID: 11500000, guid: 24a1d8faedff4daeb6c4050ad7a69020, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  footStepParticleEffect: {fileID: 5128791543972785074, guid: 3056cea49f674e38b01c173b44fc812e,
-    type: 3}
+  footStepSounds:
+  - {fileID: 8300000, guid: 2b3ee73cadbf39046b11c06fd0dc19d2, type: 3}
+  - {fileID: 8300000, guid: 1cf0a89be76b0bd4db48180b92e0013d, type: 3}
+  - {fileID: 8300000, guid: 1f85fd4b84e07654da5c0dae14efec1b, type: 3}
+  - {fileID: 8300000, guid: d48fb49a08a3e9f4ea17e5ee85af70b8, type: 3}
+  - {fileID: 8300000, guid: 255e180b20cb7574b9b0fb7625ed7446, type: 3}
+  - {fileID: 8300000, guid: 22820ee8b455c0947a24d032f77b707b, type: 3}
+  - {fileID: 8300000, guid: 2ee344734a7a59c4283a173e54850b51, type: 3}
+  - {fileID: 8300000, guid: 91848f9aba1ad3547bf9540e5cd9dc86, type: 3}
 --- !u!114 &1838387634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1377,10 +1375,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4902a0a909bc458d814f1d2af01c749d, type: 3}
+  m_Script: {fileID: 11500000, guid: a9ab03a5a394435bab26aa0e4f76cf1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximum: 100
+  footStepParticleEffect: {fileID: 5128791543972785074, guid: 3056cea49f674e38b01c173b44fc812e,
+    type: 3}
 --- !u!114 &1838387635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,9 +1389,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ed96247d4004fe8be6304c4f26aaced, type: 3}
+  m_Script: {fileID: 11500000, guid: ff61acdf129a459cac1a8567eaf92531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movementSpeed: 10
 --- !u!114 &1838387636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,10 +1402,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c1b5f0e1494c2e8aaf97d1d2f8d8c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 8da810020fac4b6f86227355503666bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 3
+  maximum: 100
 --- !u!114 &1838387637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,10 +1415,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0844f3c27bd472eb43190777ff9302e, type: 3}
+  m_Script: {fileID: 11500000, guid: 240cc267b11d4547a33c28cf39af471a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 10
+  rate: 3
 --- !u!114 &1838387638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1838387626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05292e0359124433ac60a38390e40deb, type: 3}
+  m_Script: {fileID: 11500000, guid: 36a64319077148fc9e178ed908cfdc95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5

@@ -17,11 +17,19 @@ namespace ActionEventBased
 
 		private void OnEnable()
 		{
+			if (!player)
+			{
+				return;
+			}
 			player.HealthChanged += OnPlayerHealthChanged;
 		}
 
 		private void OnDisable()
 		{
+			if (!player)
+			{
+				return;
+			}
 			player.HealthChanged -= OnPlayerHealthChanged;
 		}
 
