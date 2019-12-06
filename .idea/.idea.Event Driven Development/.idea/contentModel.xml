@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\ilanm\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\ilanm\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Event Driven Development.1238107917.00" t="ExcludeRecursive" />
+    <e p="D:\Projects\Unity\Event Driven Development" t="IncludeRecursive">
+      <e p=".git\info\exclude" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="ActionEventBased" t="Include">
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUi.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+        </e>
+        <e p="CleanedUp" t="Include">
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerHealthUi.cs" t="Include" />
+        </e>
+        <e p="Normal" t="Include">
+          <e p="Player.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Event Driven Development.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

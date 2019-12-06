@@ -1,9 +1,11 @@
-﻿using System.Globalization;
+﻿using System.Collections;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Normal
 {
+	// You also have to remember to drag in all the references to hook up the dependencies.
 	[RequireComponent(typeof(AudioSource))]
 	public class Player : MonoBehaviour
 	{
@@ -17,6 +19,7 @@ namespace Normal
 		[SerializeField] private int maxHealth = 100;
 		[SerializeField] private float movementSpeed = 10.0f;
 		[SerializeField] private Text playerHealthUiText;
+		[SerializeField] private Text damageUiText;
 
 		private float timeBetweenFootSteps;
 		private float timeSinceLastFootStep;
@@ -29,6 +32,8 @@ namespace Normal
 
 			audioSource = GetComponent<AudioSource>();
 			CurrentHealth = maxHealth;
+			
+			damageUiText.gameObject.SetActive(false);
 		}
 
 		// How much of this code actually relates to player logic, and how much to extra effects?
@@ -61,8 +66,34 @@ namespace Normal
 			// Another way is polling for the health from a player UI script.
 			playerHealthUiText.text = CurrentHealth.ToString(CultureInfo.InvariantCulture);
 
-			// TODO: Add attack UI
-			if (Input.GetButtonDown("Fire1")) CurrentHealth -= 5;
+			if (Input.GetButtonDown("Fire1"))
+			{
+				const int damage = 5;
+				CurrentHealth -= damage;
+				StartCoroutine(DisplayDamage(damage));
+			}
+		}
+
+		// Handles UI logic AND animations!
+		// If someone else needs to work with the UI in the future, it would be really hard to find where the logic actually happens, and it is also very hard to reuse this code!
+		private IEnumerator DisplayDamage(int damage)
+		{
+			var damageUiTextClone = Instantiate(damageUiText, damageUiText.transform.parent);
+			damageUiTextClone.gameObject.SetActive(true);
+			damageUiTextClone.rectTransform.anchoredPosition += Random.Range(-20.0f, 20.0f) * Vector2.right;
+			
+			damageUiTextClone.text = damage.ToString(CultureInfo.InvariantCulture);
+
+			var accumulatedTime = 0.0f;
+
+			while (accumulatedTime < 1.0f)
+			{
+				accumulatedTime += Time.deltaTime;
+				damageUiTextClone.rectTransform.anchoredPosition += 50.0f * Time.deltaTime * Vector2.up;
+				yield return null;
+			}
+			
+			Destroy(damageUiTextClone.gameObject);
 		}
 	}
 }
