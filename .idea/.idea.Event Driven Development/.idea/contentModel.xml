@@ -5,6 +5,7 @@
     <e p="C:\Users\ilanm\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Event Driven Development.1238107917.00" t="ExcludeRecursive" />
     <e p="D:\Projects\Unity\Event Driven Development" t="IncludeRecursive">
       <e p=".git\info\exclude" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="ActionEventBased" t="Include">
@@ -42,6 +43,14 @@
           <e p="PlayerHealthUi.cs" t="Include" />
         </e>
         <e p="Normal" t="Include">
+          <e p="Player.cs" t="Include" />
+        </e>
+        <e p="ScriptableObjectEvents" t="Include">
+          <e p="Editor" t="Include">
+            <e p="GameEventEditor.cs" t="Include" />
+          </e>
+          <e p="GameEvent.cs" t="Include" />
+          <e p="GameEventListener.cs" t="Include" />
           <e p="Player.cs" t="Include" />
         </e>
         <e p="UnityEventBasedAdvanced" t="Include">
