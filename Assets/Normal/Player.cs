@@ -70,13 +70,13 @@ namespace Normal
 			{
 				const int damage = 5;
 				CurrentHealth -= damage;
-				StartCoroutine(DisplayDamage(damage));
+				StartCoroutine(DisplayDamageCoroutine(damage));
 			}
 		}
 
 		// Handles UI logic AND animations!
 		// If someone else needs to work with the UI in the future, it would be really hard to find where the logic actually happens, and it is also very hard to reuse this code!
-		private IEnumerator DisplayDamage(int damage)
+		private IEnumerator DisplayDamageCoroutine(int damage)
 		{
 			var damageUiTextClone = Instantiate(damageUiText, damageUiText.transform.parent);
 			damageUiTextClone.gameObject.SetActive(true);

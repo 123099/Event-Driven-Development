@@ -9,12 +9,25 @@
       <e p="Assets" t="Include">
         <e p="ActionEventBased" t="Include">
           <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUi.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+        </e>
+        <e p="ActionEventBasedAdvanced" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="FootSteps.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
           <e p="PlayerEffects.cs" t="Include" />
           <e p="PlayerHealthUi.cs" t="Include" />
           <e p="PlayerSounds.cs" t="Include" />
         </e>
         <e p="CleanedUp" t="Include">
           <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
           <e p="PlayerHealthUi.cs" t="Include" />
         </e>
         <e p="Normal" t="Include">

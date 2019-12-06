@@ -21,6 +21,8 @@ namespace CleanedUp
 		private float timeSinceLastFootStep;
 
 		public int CurrentHealth { get; private set; }
+		public bool HasDealtDamage { get; private set; }
+		public float DamageDealt { get; private set; }
 
 		private void Awake()
 		{
@@ -57,7 +59,10 @@ namespace CleanedUp
 
 		private void ProgressFootSteps()
 		{
-			if (!isMoving) return;
+			if (!isMoving)
+			{
+				return;
+			}
 
 			if (timeSinceLastFootStep >= timeBetweenFootSteps)
 			{
@@ -72,7 +77,18 @@ namespace CleanedUp
 
 		private void Attack()
 		{
-			if (Input.GetButtonDown("Fire1")) CurrentHealth -= 5;
+			if (Input.GetButtonDown("Fire1"))
+			{
+				const int damage = 5;
+				DamageDealt = damage;
+				HasDealtDamage = true;
+				CurrentHealth -= 5;
+			}
+			else
+			{
+				DamageDealt = 0;
+				HasDealtDamage = false;
+			}
 		}
 	}
 }

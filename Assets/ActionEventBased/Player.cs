@@ -5,6 +5,12 @@ namespace ActionEventBased
 {
 	public class Player : MonoBehaviour
 	{
+		public event Action<int> HealthChanged;
+		public event Action FootStepPerformed;
+		public event Action<int> DamageDealt;
+
+		// We can even split the health and footsteps into their own reusable components with events (See actions advanced).
+		// Player then simply becomes an Actor -> The main component that provides access to all the components that build it.
 		private int currentHealth;
 		[SerializeField] private float footStepRate = 3.0f;
 
@@ -25,10 +31,7 @@ namespace ActionEventBased
 				HealthChanged?.Invoke(currentHealth);
 			}
 		}
-
-		public event Action<int> HealthChanged;
-		public event Action FootStepPerformed;
-
+		
 		private void Awake()
 		{
 			timeBetweenFootSteps = 1.0f / footStepRate;
@@ -67,7 +70,10 @@ namespace ActionEventBased
 
 		private void ProgressFootSteps()
 		{
-			if (!isMoving) return;
+			if (!isMoving)
+			{
+				return;
+			}
 
 			if (timeSinceLastFootStep >= timeBetweenFootSteps)
 			{
@@ -80,7 +86,12 @@ namespace ActionEventBased
 
 		private void Attack()
 		{
-			if (Input.GetButtonDown("Fire1")) CurrentHealth -= 5;
+			if (Input.GetButtonDown("Fire1"))
+			{
+				const int damage = 5;
+				CurrentHealth -= damage;
+				DamageDealt?.Invoke(damage);
+			}
 		}
 	}
 }
