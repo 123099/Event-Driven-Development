@@ -3,7 +3,7 @@ using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace UnityEventBasedAdvanced
+namespace ScriptableObjectEvents
 {
 	public class PlayerDamageUi : MonoBehaviour
 	{

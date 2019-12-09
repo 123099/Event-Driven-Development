@@ -1,21 +1,17 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace ScriptableObjectEvents.Editor
+namespace ScriptableObjectEvents.Events.Editor
 {
 	[CustomEditor(typeof(GameEvent))]
-	[CanEditMultipleObjects]
 	public class GameEventEditor : UnityEditor.Editor
 	{
 		public override void OnInspectorGUI()
 		{
 			base.OnInspectorGUI();
-			if (GUILayout.Button("Raise Event"))
+			if (GUILayout.Button("Raise") && target is GameEvent gameEvent)
 			{
-				foreach (var gameEvent in targets)
-				{
-					(gameEvent as GameEvent)?.Raise();
-				}
+				gameEvent.Invoke();
 			}
 		}
 	}
