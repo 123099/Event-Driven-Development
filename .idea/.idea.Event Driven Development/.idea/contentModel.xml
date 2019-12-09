@@ -42,6 +42,28 @@
           <e p="PlayerDamageUi.cs" t="Include" />
           <e p="PlayerHealthUi.cs" t="Include" />
         </e>
+        <e p="EventManagerBased" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="Events" t="Include">
+            <e p="DamageGameEvent.cs" t="Include" />
+            <e p="EventHandler.cs" t="Include" />
+            <e p="EventManager.cs" t="Include" />
+            <e p="FootStepPerformedGameEvent.cs" t="Include" />
+            <e p="GameEvent.cs" t="Include" />
+            <e p="HealthChangedGameEvent.cs" t="Include" />
+            <e p="ParameterlessEventHandler.cs" t="Include" />
+            <e p="StartedMovingGameEvent.cs" t="Include" />
+            <e p="StoppedMovingGameEvent.cs" t="Include" />
+          </e>
+          <e p="FootSteps.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUi.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+        </e>
         <e p="Normal" t="Include">
           <e p="Player.cs" t="Include" />
         </e>
