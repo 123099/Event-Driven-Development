@@ -1,18 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\alex\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\alex\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Event-Driven-Development.-1775928563.00" t="ExcludeRecursive" />
-    <e p="D:\Projects\Unity\Event-Driven-Development" t="IncludeRecursive">
+    <e p="C:\Projects\Event-Driven-Development" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CleanedUp" t="Include">
+        <e p="1.Common Setup" t="Include">
           <e p="Player.cs" t="Include" />
+        </e>
+        <e p="2.CleanedUp" t="Include">
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
           <e p="PlayerHealthUI.cs" t="Include" />
         </e>
-        <e p="Normal" t="Include">
+        <e p="ActionEventBased" t="Include">
           <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
           <e p="PlayerHealthUI.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+        </e>
+        <e p="ActionEventBasedAdvanced" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="FootSteps.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUI.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+        </e>
+        <e p="ActionEventBasedAdvancedWithSendMessage" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="FootSteps.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUI.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+        </e>
+        <e p="Class Live Code" t="Include">
+          <e p="Player.cs" t="Include" />
+        </e>
+        <e p="EventManagerBased" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="Events" t="Include">
+            <e p="DamageGameEvent.cs" t="Include" />
+            <e p="EventHandler.cs" t="Include" />
+            <e p="EventManager.cs" t="Include" />
+            <e p="FootStepPerformedGameEvent.cs" t="Include" />
+            <e p="GameEvent.cs" t="Include" />
+            <e p="HealthChangedGameEvent.cs" t="Include" />
+            <e p="ParameterlessEventHandler.cs" t="Include" />
+            <e p="StartedMovingGameEvent.cs" t="Include" />
+            <e p="StoppedMovingGameEvent.cs" t="Include" />
+          </e>
+          <e p="FootSteps.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUI.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+        </e>
+        <e p="ScriptableObjectEvents" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="Events" t="Include">
+            <e p="Editor" t="Include">
+              <e p="GameEventEditor.cs" t="Include" />
+            </e>
+            <e p="GameEvent.cs" t="Include" />
+            <e p="GameEventListener.cs" t="Include" />
+            <e p="GenericGameEvent.cs" t="Include" />
+            <e p="GenericGameEventListener.cs" t="Include" />
+            <e p="IntGameEvent.cs" t="Include" />
+            <e p="IntGameEventListener.cs" t="Include" />
+          </e>
+          <e p="FootSteps.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUI.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="CustomUnityEvents.cs" t="Include" />
+          </e>
+        </e>
+        <e p="UnityEventBasedAdvanced" t="Include">
+          <e p="Attack.cs" t="Include" />
+          <e p="FootSteps.cs" t="Include" />
+          <e p="Health.cs" t="Include" />
+          <e p="Movement.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="PlayerDamageUi.cs" t="Include" />
+          <e p="PlayerEffects.cs" t="Include" />
+          <e p="PlayerHealthUI.cs" t="Include" />
+          <e p="PlayerSounds.cs" t="Include" />
+          <e p="Utils" t="Include">
+            <e p="CustomUnityEvents.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Event-Driven-Development.sln" t="IncludeFlat" />
@@ -20,5 +112,7 @@
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
+    <e p="C:\Users\Student2020\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Student2020\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Event-Driven-Development.-103645965.00" t="ExcludeRecursive" />
   </component>
 </project>
