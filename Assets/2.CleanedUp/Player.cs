@@ -34,7 +34,7 @@ namespace _2.CleanedUp
 
         // How much of this code actually relates to player logic, and how much to extra effects?
         // How many things is this single COMPONENT trying to accomplish?
-        // This is cleaner now, but it still tried to do too much and relies on too much. Because of that, it is impossible to test the player without having all the other settings!
+        // This is cleaner now, but it still tries to do too much and relies on too much. Because of that, it is impossible to test the player without having all the other settings!
         private void Update()
         {
             Move();
